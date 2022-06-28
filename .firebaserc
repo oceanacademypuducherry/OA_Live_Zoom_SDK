@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "oceanlivereact"
+  },
+  "targets": {
+    "oceanlivereact": {
+      "hosting": {
+        "classroom": [
+          "oa-live-classroom"
+        ]
+      }
+    }
+  }
+}
