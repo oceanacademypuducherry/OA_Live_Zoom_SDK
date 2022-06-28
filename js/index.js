@@ -7,6 +7,10 @@ function websdkready() {
   var testTool = window.testTool;
 
   console.log(testTool);
+
+  if (!window.location.search) {
+    // window.open("https://oceanacademy.co.in/", "_self");
+  }
   console.log("======================");
   if (testTool.isMobileDevice()) {
     vConsole = new VConsole();
@@ -63,7 +67,7 @@ function websdkready() {
   console.log(
     urlQuery,
     "=========",
-    getDate(),
+    window.location.search,
     "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
   );
   if (getDate().timeDeffirent >= 600 || getDate().timeDeffirent <= -3600) {

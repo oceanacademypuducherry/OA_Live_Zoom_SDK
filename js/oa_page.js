@@ -6,6 +6,7 @@ function getUrlQuery() {
   let valuesReg = /([\w]*)=([\w\.\%\+\-]*)/gi;
   let dictStr = "";
   let keyValaueList = window.location.href.match(valuesReg);
+
   keyValaueList.forEach((item, index) => {
     let keyPair = item.split("=");
     value = keyPair[1].replace(/%2E/g, ".").replace(/%20/g, " ");
@@ -107,3 +108,7 @@ function couterText(countD) {
     }M : ${countD.day < 10 ? "0" + countD.day : countD.day}D`;
   }
 }
+
+backBtn.addEventListener("click", () => {
+  window.open("https://oceanacademy.co.in/", "_self");
+});
