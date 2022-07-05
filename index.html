@@ -24,8 +24,11 @@
 
         #nav-tool {
             margin-bottom: 0px;
+           
         }
-
+.container{
+    display: none;
+}
         #show-test-tool {
             position: absolute;
             top: 100px;
@@ -51,10 +54,41 @@
             transform: translate(-50%, -50%);
             left: 50%;
             margin: 0;
+            
+        }
+        #oa-bt{
+      
+            background-color: rgb(0, 136, 255);
+          margin-top: 5px;
+            color: rgb(255, 255, 255);
+           position: absolute;
+  
+
+            font-size: 15px;
+     
+            z-index: 1;
+       padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        #oa-bt:hover{
+                 
+            background-color: rgb(9, 102, 183);
+        }
+        body{
+            background-color: rgb(9, 102, 183);
+        }
+        
+        #zmmtg-root{
+            transform: scale(0.90) !important;
+            z-index: -1 ;
+       
+            
         }
     </style>
 
-    <nav id="nav-tool" style="display: none;" class="navbar navbar-inverse navbar-fixed-top">
+    <nav id="nav-tool"  class="navbar navbar-inverse navbar-fixed-top">
+        <button id="oa-bt" >Home</button>
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Zoom WebSDK</a>
@@ -126,6 +160,7 @@
         <button type="submit" class="btn btn-primary" id="show-test-tool-btn"
             title="show or hide top test tool">Show</button>
     </div> -->
+
     <script>
         document.getElementById('show-test-tool-btn').addEventListener("click", function (e) {
             var textContent = e.target.textContent;
@@ -147,12 +182,12 @@
     <script src="https://source.zoom.us/zoom-meeting-2.4.0.min.js"></script>
     <script src="js/tool.js"></script>
     <script src="js/vconsole.min.js"></script>
+   
     <script src="js/index.js"></script>
+    <script src="./meetingRootContreller.js"></script>
 
-    <script>
 
-
-    </script>
+   
 </body>
 
 </html>

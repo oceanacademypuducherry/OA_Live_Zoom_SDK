@@ -82,7 +82,7 @@ function coutdown() {
     if (totlaSec < -1800) {
       clearInterval(intVell);
       alert("Invalid url");
-      window.open("https://oceanacademy.co.in/", "_self");
+      window.top.location.href = "https://oceanacademy.co.in/";
     } else if (totlaSec < 300) {
       history.back();
     }
@@ -110,5 +110,5 @@ function couterText(countD) {
 }
 
 backBtn.addEventListener("click", () => {
-  window.open("https://oceanacademy.co.in/", "_self");
+  window.top.location.href = "https://oceanacademy.co.in/";
 });

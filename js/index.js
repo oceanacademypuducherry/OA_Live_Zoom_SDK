@@ -7,9 +7,10 @@ function websdkready() {
   var testTool = window.testTool;
 
   console.log(testTool);
+  console.log(window.location.pathname);
 
   if (!window.location.search) {
-    // window.open("https://oceanacademy.co.in/", "_self");
+    // window.top.location.href = "https://oceanacademy.co.in/";
   }
   console.log("======================");
   if (testTool.isMobileDevice()) {
@@ -78,6 +79,7 @@ function websdkready() {
     );
     return;
   }
+
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   // document.getElementById("display_name").value =
   //   "CDN" +
