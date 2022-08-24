@@ -38,12 +38,17 @@ window.addEventListener("load", () => {
     }
   }
 
-  meetingStartDate.innerText = `Meeting Starting at ${mt.getDate()}-${mt.getMonth()}-${mt.getFullYear()} ${
-    mtGetHours().h
-  }:${mt.getMinutes()}${mtGetHours().amPM}`;
+  meetingStartDate.innerText = `Meeting Starting at ${mt.getDate()}-${
+    mt.getMonth() + 1
+  }-${mt.getFullYear()} ${mtGetHours().h}:${mt.getMinutes()}${
+    mtGetHours().amPM
+  }`;
   coutdown();
   //   window.open("https://oceanacademy.co.in/", "_self");
 });
+
+let ct = new Date(Date.now());
+let mt = new Date(parseInt(getUrlQuery().mt));
 
 function coutdown() {
   let mTime = new Date(parseInt(getUrlQuery().mt));
@@ -79,13 +84,14 @@ function coutdown() {
     };
 
     coundown.innerText = couterText(countD);
-    if (totlaSec < -1800) {
-      clearInterval(intVell);
-      alert("Invalid url");
-      window.top.location.href = "https://oceanacademy.co.in/";
-    } else if (totlaSec < 300) {
-      history.back();
-    }
+
+    // if (totlaSec < -1800) {
+    //   clearInterval(intVell);
+    //   alert("Invalid url");
+    //   window.top.location.href = "https://oceanacademy.co.in/";
+    // } else if (totlaSec < 300) {
+    //   history.back();
+    // }
   }, 1000);
 }
 

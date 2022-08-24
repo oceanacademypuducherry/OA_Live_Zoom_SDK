@@ -67,9 +67,8 @@ function websdkready() {
   }
   console.log(
     urlQuery,
-    "=========",
-    window.location.search,
-    "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+
+    window.location.search
   );
   if (getDate().timeDeffirent >= 600 || getDate().timeDeffirent <= -3600) {
     console.log(window.location.host);
